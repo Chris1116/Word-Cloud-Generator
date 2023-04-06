@@ -55,7 +55,7 @@ flask run
 - WordCloud
 - HTML/CSS/JavaScript
 
-## License
+## Lincense
 
 This project is licensed under the MIT License.
 
