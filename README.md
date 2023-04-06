@@ -16,6 +16,8 @@ This Word Cloud Generator is a web application built using Flask, Python, and Be
 ```bash
 git clone https://github.com/yourusername/word-cloud-generator.git
 
+```
+
 2. Change the directory to the project folder:
 
 ```bash
