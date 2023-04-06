@@ -1,0 +1,67 @@
+<!-- version 1 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Cloud</title>
+	<style>
+		body {
+			background-color: #f8f8f8;
+			font-family: Arial, sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+			font-size: 2.5em;
+		}
+
+		img {
+			max-width: 100%;
+			border-radius: 5px;
+			box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+			margin: 20px;
+		}
+
+		.result-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: rgba(255, 255, 255, 0.8);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			width: 80%;
+			margin-top: 30px;
+		}
+
+		.result-container img {
+			margin-top: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Word Cloud</h1>
+	<div class="result-container">
+		{% if 'wordcloud.png' in os.listdir('static') %}
+			<img src="{{ url_for('static', filename='wordcloud.png') }}" alt="Word Cloud">
+		{% endif %}
+
+		{% if shape == 'message' %}
+			<img src="{{ url_for('static', filename='MessageCloud.png') }}" alt="Message">
+		{% elif shape == 'news' %}
+			<img src="{{ url_for('static', filename='NewsCloud.png') }}" alt="NEWS">
+		{% elif shape == 'twitter' %}
+			<img src="{{ url_for('static', filename='TwitterCloud.png') }}" alt="Twitter">
+		{% elif shape == 'github' %}
+			<img src="{{ url_for('static', filename='GithubCloud.png') }}" alt="Github">
+		{% endif %}
+	</div>
+</body>
+</html>
