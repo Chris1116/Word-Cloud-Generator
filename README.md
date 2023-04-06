@@ -3,6 +3,9 @@
 - This Word Cloud Generator is a web application built using Flask, Python, and Beautiful Soup, allowing users to create word clouds based on the text from a given URL and a selected shape.
 - As for the design for the web page, we make the backgroud of our web serves as dynamic wallpaper which can change every 10 seconds.
 - To reach this, we access the image from Unsplash by its API.
+![HOME Image](./home_web.png)
+![RESULT Image](./result_web.png)
+
 
 ## Features
 
