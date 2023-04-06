@@ -22,18 +22,20 @@ git clone https://github.com/yourusername/word-cloud-generator.git
 
 ```bash
 cd word-cloud-generator
+```
 
 3. Create a virtual environment and activate it:
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 4. Install the required packages:
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 ## Usage
 
@@ -42,6 +44,7 @@ pip install -r requirements.txt
 ```bash
 export FLASK_APP=app.py
 flask run 
+```
 
 2. Open a web browser and navigate to http://localhost:5000.
 
@@ -61,7 +64,3 @@ flask run
 
 This project is licensed under the MIT License.
 
-# Word-Cloud-Generator
-# Word-Cloud-Generator
-# Word-Cloud-Generator
-# Word-Cloud-Generator
