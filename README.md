@@ -5,6 +5,7 @@
 - To reach this, we access the image from Unsplash by its API.
 
 <img src="./home_web.png" alt="HOME Image" width="600">
+<img src="./result_web.png" alt="RESULT Image" width="600">
 
 
 ## Features
