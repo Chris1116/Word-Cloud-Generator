@@ -20,7 +20,7 @@
 1. Clone the repository or download the source code:
 
 ```bash
-git clone https://github.com/yourusername/word-cloud-generator.git
+git clone https://github.com/Chris1116/word-cloud-generator.git
 
 ```
 
