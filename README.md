@@ -4,8 +4,8 @@
 - As for the design for the web page, we make the backgroud of our web serves as dynamic wallpaper which can change every 10 seconds.
 - To reach this, we access the image from Unsplash by its API.
 
-<img src="./home_web.png" alt="HOME Image" width="800">
-<img src="./result_web.png" alt="RESULT Image" width="800">
+<img src="./home_web.png" alt="HOME Image" width="600">
+<img src="./result_web.png" alt="RESULT Image" width="600">
 
 
 ## Features
