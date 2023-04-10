@@ -6,6 +6,9 @@ import numpy as np
 from PIL import Image
 import io
 import os
+import re
+import nltk
+from nltk.stem import WordNetLemmatizer
 
 app = Flask(__name__)
 
@@ -19,7 +22,22 @@ def result():
     shape = request.form['shape']
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
+    
+    for script in soup(["script", "style", "comment"]):
+        script.extract()
     text = soup.get_text()
+    
+    text = text.lower()
+    text = ' '.join(text.split())
+    text = re.sub(r'[^a-zA-Z\s]', '', text)
+    
+    nltk.download('punkt')
+    nltk.download('wordnet')
+    lemmatizer = WordNetLemmatizer()
+    tokens = nltk.word_tokenize(text)
+    lemmatized_tokens = [lemmatizer.lemmatize(token) for token in tokens]
+    text = ' '.join(lemmatized_tokens)
+
     stopwords = set(STOPWORDS)
 
     mask_image_path = None
