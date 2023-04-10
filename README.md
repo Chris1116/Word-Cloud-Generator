@@ -15,7 +15,7 @@
 - Generate a word cloud based on the fetched text
 - Choose from four different shapes for the word cloud. 
 
-  (***generate any differnet shapes of word cloud*** whatever you want, as long as you should put the imag(shape).png you want to the static file.)
+  (***generate any shapes of word cloud*** whatever you want, as long as you should put the imag(shape).png you want to the static file.)
   
 - Display the generated word cloud on the result page
 
