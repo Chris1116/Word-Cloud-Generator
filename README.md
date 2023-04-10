@@ -6,7 +6,7 @@
 - Notice!! You should use your own Unsplash API. You can apply on the Unsplash website by yourself.
 
 <img src="./home_web.png" alt="HOME Image" width="600">
-
+<img src="./result_web.png" alt="RESULT Image" width="600">
 
 
 ## Features
