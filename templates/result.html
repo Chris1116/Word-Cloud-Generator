@@ -69,18 +69,20 @@
 <body>
 	<h1>Word Cloud</h1>
 	<div class="result-container">
+		
+		<!-- Append the timestamp to the image URLs -->
 		{% if 'wordcloud.png' in os.listdir('static') %}
-			<img src="{{ url_for('static', filename='wordcloud.png') }}" alt="Word Cloud">
+			<img src="{{ url_for('static', filename='wordcloud.png', t=timestamp) }}" alt="Word Cloud">
 		{% endif %}
 
 		{% if shape == 'message' %}
-			<img src="{{ url_for('static', filename='MessageCloud.png') }}" alt="Message">
+			<img src="{{ url_for('static', filename='MessageCloud.png', t=timestamp) }}" alt="Message">
 		{% elif shape == 'news' %}
-			<img src="{{ url_for('static', filename='NewsCloud.png') }}" alt="NEWS">
+			<img src="{{ url_for('static', filename='NewsCloud.png', t=timestamp) }}" alt="NEWS">
 		{% elif shape == 'twitter' %}
-			<img src="{{ url_for('static', filename='TwitterCloud.png') }}" alt="Twitter">
+			<img src="{{ url_for('static', filename='TwitterCloud.png', t=timestamp) }}" alt="Twitter">
 		{% elif shape == 'github' %}
-			<img src="{{ url_for('static', filename='GithubCloud.png') }}" alt="Github">
+			<img src="{{ url_for('static', filename='GithubCloud.png', t=timestamp) }}" alt="Github">
 		{% endif %}
 
 		<!-- Add the "Try again" button -->
