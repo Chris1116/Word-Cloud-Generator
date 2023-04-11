@@ -9,6 +9,7 @@ import os
 import re
 import nltk
 from nltk.stem import WordNetLemmatizer
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -56,8 +57,15 @@ def result():
     if shape in ['news', 'twitter', 'github', 'message']:
         output_filename = f'static/{shape.capitalize()}Cloud.png'
         wordcloud.to_file(output_filename)
+        
+        #  add a timestamp or unique identifier to the image URL to force the browser to request the new image each time. 
+        timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+    else:
+        timestamp = None
 
-    return render_template('result.html', shape=shape, os=os)
+    return render_template('result.html', shape=shape, os=os, timestamp=timestamp)
+    
+    #return render_template('result.html', shape=shape, os=os)
 
 if __name__ == '__main__':
     app.run(debug=True)
